@@ -1,0 +1,191 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    font: normal 75% Source Code Pro, monospace;
+    background: #0a0d0f;
+    color: #fff;
+}
+header {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 58%;
+    width: 240px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contact {
+    padding-top: 12px;
+}
+.contact a{
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 18px;
+    color: #7A7C80;
+}
+h1{
+    font-weight: normal;
+    font-size: 25px;
+    color: white;
+}
+p{
+    font-size: 18px;
+    color: #7A7C80;
+}
+#page {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -280px;
+  height: 560px;
+}
+
+@media only screen and (max-height: 580px),
+       only screen and (max-width: 578px) {
+  #page {
+    top: 14px;
+    margin-top: 0;
+  }
+}
+.terminal {
+    margin-bottom: -10px;
+}
+.command {
+    color: #e00000;
+    font-size: 34px;
+}
+.cursor {
+    content: '';
+    display: inline-block;
+    margin-left: 3px;
+    background-color: white;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes blink {
+    0% {
+        opacity:1;
+    }
+    49% {
+        opacity:1;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity:0;
+    }
+}
+.content {
+    position: absolute;
+    left: 50%;
+    width: 50%;
+}
+section ul {
+    line-height: 22px;
+    list-style: none;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    font-size: 18px;
+    color: #7A7C80;
+}
+section ul a {
+    color: #7A7C80;
+    text-decoration: none;
+}
+a:hover {
+    color: #810000;
+    transition: all .3s ease-in-out;
+}
+.link a{
+    color: #e00000;
+}
+.link a:hover{
+    color: #810000;
+    transition: all .3s ease-in-out;
+}
+.title{
+    color: #e00000;
+}
+.mt{
+    margin-top: 16px;
+}
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(210px, 160px));
+    gap: 0px 10px;
+    margin: 20px 0px 0px;
+    overflow: hidden;
+    list-style: none;
+}
+
+.skills-list li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-family: var(--font-mono);
+    font-size: var(--fz-xs);
+}
+.skills-list li::before {
+    content: "-";
+    position: absolute;
+    left: 0px;
+    color: #e00000;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .skills-list {
+      grid-template-columns: repeat(2, minmax(210px, 160px));
+    }
+}
+@media only screen and (max-width: 578px) {
+  header {
+    position: static;
+    top: 10px;
+    padding-bottom: 16px;
+    margin: 40px 24px 16px;
+    width: auto;
+  }
+  .header-content .header-logo {
+    top: -33px;
+  }
+
+  h1, p {
+    left: 24px;
+    margin-left: 0;
+  }
+  .contact {
+    left: 252px;
+    margin-left: 0;
+  }
+  .content {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    margin-left: 0;
+    width: auto;
+  }
+  section{
+    width: 100%;
+    float: left;
+    clear: both;
+  }
+  .skills-list {
+    grid-template-columns: repeat(1, minmax(210px, 160px));
+  }
+}
